@@ -1,65 +1,325 @@
-import Image from "next/image";
+"use client";
+
+import { useState, useEffect } from 'react';
+import Cursor from '../components/Cursor';
+import Spotlight from '../components/Spotlight';
+import StatusBar from '../components/StatusBar';
+import CommandPalette from '../components/CommandPalette';
+import Window from '../components/Window';
 
 export default function Home() {
+  const [zIndexMap, setZIndexMap] = useState({
+    'w-hero': 50,
+    'w-projects': 51,
+    'w-term': 52,
+    'w-contact': 53,
+  });
+  const [maxZIndex, setMaxZIndex] = useState(54);
+  const [isCommandPaletteOpen, setIsCommandPaletteOpen] = useState(false);
+
+  const handleWindowFocus = (windowId: string) => {
+    const newZIndex = maxZIndex + 1;
+    setZIndexMap(prev => ({
+      ...prev,
+      [windowId]: newZIndex,
+    }));
+    setMaxZIndex(newZIndex);
+  };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setIsCommandPaletteOpen(prev => !prev);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
+    <>
+      <Cursor />
+      <Spotlight />
+      
+      {/* Desktop Canvas */}
+      <div id="desk">
+        {/* Hero Window */}
+        <Window
+          id="w-hero"
+          title="fuad_haque  profile.md"
+          defaultX={55}
+          defaultY={55}
+          defaultW={560}
+          defaultH={370}
+          zIndex={zIndexMap['w-hero']}
+          onFocus={handleWindowFocus}
+          isActive={zIndexMap['w-hero'] === maxZIndex}
+          animationDelay={0.08}
+        >
+          <div className="h-index">// ENGINEER · SYLHET, BD · 01</div>
+          <h1 className="h-name">
+            Fuad<br />
+            <em>Haque</em>
           </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+          <div className="h-title">Python Backend Engineer · FastAPI · Railway</div>
+          <p className="h-bio">
+            Building production-grade backend systems at the intersection of
+            statistical depth and AI engineering. Currently shipping FastAPI services
+            and moving toward RAG systems at scale.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
+          <div className="h-links">
+            <a
+              href="https://cal.com/fuad-haque"
+              className="hl cta"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Book a Call
+            </a>
+            <a
+              href="https://github.com/Fuad-Haque"
+              className="hl"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub
+            </a>
+            <a href="mailto:fuadhaque.dev@gmail.com" className="hl">
+              Email
+            </a>
+          </div>
+        </Window>
+
+        {/* Projects Window */}
+        <Window
+          id="w-projects"
+          title="dossiers  /projects"
+          defaultX={670}
+          defaultY={75}
+          defaultW={510}
+          defaultH={490}
+          zIndex={zIndexMap['w-projects']}
+          onFocus={handleWindowFocus}
+          isActive={zIndexMap['w-projects'] === maxZIndex}
+          animationDelay={0.18}
+        >
+          <div className="sec-lbl">// Case Studies  3 Deployed</div>
+
+          <div className="proj">
+            <div className="pmeta">
+              <span className="pnum">01 / 03</span>
+              <span className="pstatus"> LIVE</span>
+            </div>
+            <div className="pname">URL Shortener API</div>
+            <p className="pdesc">
+              Production-grade shortening service with analytics, custom aliases, and full Swagger documentation. Persistent storage. Deployed on Railway.
+            </p>
+            <div className="ptags">
+              <span className="tag">FASTAPI</span>
+              <span className="tag">PYTHON</span>
+              <span className="tag">RAILWAY</span>
+              <span className="tag">PYDANTIC V2</span>
+              <span className="tag">JWT AUTH</span>
+            </div>
+            <div className="plinks">
+              <a
+                href="https://web-production-5bd50.up.railway.app/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="plink"
+              >
+                Live Docs
+              </a>
+              <a
+                href="https://github.com/Fuad-Haque/url-shortener-api"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="plink"
+              >
+                Source
+              </a>
+            </div>
+          </div>
+
+          <div className="proj">
+            <div className="pmeta">
+              <span className="pnum">02 / 03</span>
+              <span className="pstatus"> LIVE</span>
+            </div>
+            <div className="pname">Webhook Handler</div>
+            <p className="pdesc">
+              Event-driven webhook processing system. Validates, routes, and handles payloads from external services. Built for reliability and extensibility.
+            </p>
+            <div className="ptags">
+              <span className="tag">FASTAPI</span>
+              <span className="tag">ASYNC</span>
+              <span className="tag">RAILWAY</span>
+              <span className="tag">PYDANTIC</span>
+              <span className="tag">PYTHON</span>
+            </div>
+            <div className="plinks">
+              <a
+                href="https://webhook-handler-production-99e2.up.railway.app/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="plink"
+              >
+                Live Docs
+              </a>
+              <a
+                href="https://github.com/Fuad-Haque/webhook-handler"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="plink"
+              >
+                Source
+              </a>
+            </div>
+          </div>
+
+          <div className="proj">
+            <div className="pmeta">
+              <span className="pnum">03 / 03</span>
+              <span className="pstatus"> LIVE</span>
+            </div>
+            <div className="pname">Task Automation API</div>
+            <p className="pdesc">
+              Automated task scheduling and lifecycle management. Handles creation, status tracking, and execution pipelines with clean REST architecture.
+            </p>
+            <div className="ptags">
+              <span className="tag">FASTAPI</span>
+              <span className="tag">RENDER</span>
+              <span className="tag">BCRYPT</span>
+              <span className="tag">JOSE JWT</span>
+              <span className="tag">UVICORN</span>
+            </div>
+            <div className="plinks">
+              <a
+                href="https://task-automation-api-i90w.onrender.com/docs"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="plink"
+              >
+                Live Docs
+              </a>
+              <a
+                href="https://github.com/Fuad-Haque/task-automation-api"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="plink"
+              >
+                Source
+              </a>
+            </div>
+          </div>
+        </Window>
+
+        {/* Terminal Window */}
+        <Window
+          id="w-term"
+          title="zsh  ~"
+          defaultX={1235}
+          defaultY={55}
+          defaultW={330}
+          defaultH={198}
+          zIndex={zIndexMap['w-term']}
+          onFocus={handleWindowFocus}
+          isActive={zIndexMap['w-term'] === maxZIndex}
+          animationDelay={0.12}
+        >
+          <div className="tb" style={{ padding: '15px 18px' }}>
+            <div className="tl">
+              <span className="tp">fuad@dev</span>
+              <span className="ts">:~$</span>
+              &nbsp;<span className="tc">whoami</span>
+            </div>
+            <div className="to">backend engineer · freelancer · builder</div>
+            <div className="tl" style={{ marginTop: '5px' }}>
+              <span className="tp">fuad@dev</span>
+              <span className="ts">:~$</span>
+              &nbsp;<span className="tc">uptime</span>
+            </div>
+            <div className="to">available for hire · open to projects</div>
+            <div className="tl" style={{ marginTop: '5px' }}>
+              <span className="tp">fuad@dev</span>
+              <span className="ts">:~$</span>
+              &nbsp;<span className="tc">git log --oneline -3</span>
+            </div>
+            <div className="to ok"> 3 projects deployed · actively building</div>
+            <div className="tl" style={{ marginTop: '5px' }}>
+              <span className="tp">fuad@dev</span>
+              <span className="ts">:~$</span>
+              &nbsp;<span className="tcur"></span>
+            </div>
+          </div>
+        </Window>
+
+        {/* Contact Window */}
+        <Window
+          id="w-contact"
+          title="contact.json"
+          defaultX={670}
+          defaultY={620}
+          defaultW={350}
+          defaultH={210}
+          zIndex={zIndexMap['w-contact']}
+          onFocus={handleWindowFocus}
+          isActive={zIndexMap['w-contact'] === maxZIndex}
+          animationDelay={0.33}
+        >
+          <ul className="clist">
+            <li className="ci">
+              <span className="cl">Email</span>
+              <a href="mailto:fuadhaque.dev@gmail.com" className="cv">
+                fuadhaque.dev@gmail.com
+              </a>
+            </li>
+            <li className="ci">
+              <span className="cl">GitHub</span>
+              <a
+                href="https://github.com/Fuad-Haque"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cv"
+              >
+                github.com/Fuad-Haque
+              </a>
+            </li>
+            <li className="ci">
+              <span className="cl">Cal.com</span>
+              <a
+                href="https://cal.com/fuad-haque"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="cv"
+              >
+                cal.com/fuad-haque
+              </a>
+            </li>
+            <li className="ci">
+              <span className="cl">Location</span>
+              <span className="cv" style={{ cursor: 'default' }}>
+                Sylhet, Bangladesh
+              </span>
+            </li>
+          </ul>
+        </Window>
+      </div>
+
+      {/* Noise Grain Overlay */}
+      <div id="noise" />
+
+      {/* Status Bar */}
+      <StatusBar />
+
+      {/* Command Palette */}
+      <CommandPalette
+        isOpen={isCommandPaletteOpen}
+        onClose={() => setIsCommandPaletteOpen(false)}
+        onFocus={handleWindowFocus}
+      />
+    </>
   );
 }
