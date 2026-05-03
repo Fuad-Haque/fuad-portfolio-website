@@ -40,7 +40,7 @@ export default function AboutPage() {
         {/* Right — Text */}
         <div>
           <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-6">
-            Full-stack engineer building production AI-powered systems from Sylhet, Bangladesh.
+            Full-stack engineer building production AI-powered systems.
           </p>
           <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-6">
             FastAPI backends · Next.js frontends · Qdrant vector search · SSE streaming · GSAP animations · Framer Motion transitions · WebSocket real-time
