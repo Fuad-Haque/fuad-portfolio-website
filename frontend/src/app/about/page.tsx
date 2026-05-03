@@ -8,7 +8,7 @@ export default function AboutPage() {
     "Role:        Full-Stack Engineer",
     "Location:    Sylhet, Bangladesh",
     "Status:      ● available",
-    "Stack:       FastAPI, Next.js, TypeScript",
+    "Stack:       FastAPI · Next.js · Qdrant · SSE · GSAP · WebSocket",
     "Deployed:    5 projects",
     "Uptime:      actively building",
     "",
@@ -43,13 +43,10 @@ export default function AboutPage() {
             Full-stack engineer building production AI-powered systems from Sylhet, Bangladesh.
           </p>
           <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-6">
-            FastAPI backends and Next.js frontends — deployed, documented, Loom walkthrough included.
-          </p>
-          <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-6">
-            Moving toward retainer-based remote contracts: $35–50/hr now, $3–5k/month AI systems by late 2026.
+            FastAPI backends · Next.js frontends · Qdrant vector search · SSE streaming · GSAP animations · Framer Motion transitions · WebSocket real-time
           </p>
           <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-8">
-            Not available for tutorials, revisions without scope, or projects where "live URL" isn't the definition of done.
+            REST APIs · Webhook integrations · Full-stack MVPs · Semantic search · Real-time dashboards · Task automation
           </p>
 
           <p className="font-mono text-[#50507A] text-[0.75rem]">
