@@ -46,7 +46,7 @@ async def handle_webhook(
           variants={fadeUp} initial="hidden" animate="visible" custom={2}
           className="font-mono text-xs text-[#50507A] mb-6 tracking-widest"
         >
-          &gt; FULL-STACK ENGINEER · SYLHET, BD
+          &gt; FULL-STACK ENGINEER
         </motion.p>
 
         <div className="mb-6">
@@ -68,10 +68,9 @@ async def handle_webhook(
 
         <motion.p
           variants={fadeUp} initial="hidden" animate="visible" custom={9}
-          className="font-body text-[#9090BB] text-base mb-8 max-w-lg leading-relaxed"
+          className="font-body text-[#9090BB] text-base mb-8 max-w-2xl leading-relaxed"
         >
-          FastAPI backends and Next.js frontends — five in production.
-          <br />Open to serious remote projects.
+          FastAPI backends · Next.js frontends · Qdrant vector search · SSE streaming · GSAP animations · Framer Motion transitions · WebSocket real-time — five in production. Open to serious remote projects.
         </motion.p>
 
         <motion.div
