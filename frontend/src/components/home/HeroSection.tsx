@@ -25,22 +25,6 @@ export function HeroSection() {
         }}
       />
 
-      {/* Decorative background number */}
-      <div className="absolute bottom-0 right-8 pointer-events-none select-none" aria-hidden="true">
-        <span
-          style={{
-            fontSize: "clamp(12rem, 20vw, 20rem)",
-            opacity: 0.04,
-            lineHeight: 1,
-            fontFamily: "var(--font-syne), sans-serif",
-            fontWeight: 800,
-            color: "#EEEEFF",
-          }}
-        >
-          01
-        </span>
-      </div>
-
       {/* Foreground content */}
       <div className="relative z-10 max-w-6xl w-full">
 
