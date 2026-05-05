@@ -14,6 +14,33 @@ export function HeroSection() {
   return (
     <section className="relative min-h-[100svh] flex items-end pb-24 px-6 md:px-12 overflow-hidden">
 
+      {/* Grid background */}
+      <div
+        className="absolute inset-0 pointer-events-none select-none"
+        aria-hidden="true"
+        style={{
+          backgroundImage: `linear-gradient(#1A1A2E 1px, transparent 1px), linear-gradient(90deg, #1A1A2E 1px, transparent 1px)`,
+          backgroundSize: "60px 60px",
+          opacity: 0.4,
+        }}
+      />
+
+      {/* Decorative background number */}
+      <div className="absolute bottom-0 right-8 pointer-events-none select-none" aria-hidden="true">
+        <span
+          style={{
+            fontSize: "clamp(12rem, 20vw, 20rem)",
+            opacity: 0.04,
+            lineHeight: 1,
+            fontFamily: "var(--font-syne), sans-serif",
+            fontWeight: 800,
+            color: "#EEEEFF",
+          }}
+        >
+          01
+        </span>
+      </div>
+
       {/* Foreground content */}
       <div className="relative z-10 max-w-6xl w-full">
 
