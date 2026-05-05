@@ -32,7 +32,7 @@ export function Navbar() {
           <div className="w-1.5 h-1.5 rounded-full bg-[#00D4AA] animate-pulse" />
           {tooltip && <div className="absolute left-4 top-1/2 -translate-y-1/2 font-mono text-[0.7rem] text-[#9090BB] bg-[#0D0D15] border border-[#1A1A2E] px-2 py-1 rounded-sm whitespace-nowrap">available for projects</div>}
         </div>
-        <Link href="/" className="font-mono text-[#6C63FF] font-medium tracking-wider hover:opacity-70 transition-opacity">fuad.dev</Link>
+        <Link href="/" className="font-mono text-[#6C63FF] font-bold tracking-wider hover:opacity-70 transition-opacity" >fuad.dev</Link>
         <div className="hidden md:flex items-center gap-6 ml-4">
           {navLinks.map((link) => (
             <Link key={link.href} href={link.href} className={`font-mono text-[0.8rem] transition-colors duration-150 ${pathname === link.href ? "text-[#EEEEFF] border-b border-[#6C63FF]" : "text-[#50507A] hover:text-[#9090BB]"}`}>{link.label}</Link>
