@@ -16,8 +16,9 @@ export function HeroSection() {
 
       {/* Decorative background number */}
       <div className="absolute bottom-0 right-8 pointer-events-none select-none" aria-hidden="true">
-        <span className="font-display font-black text-[#EEEEFF]"
-          style={{ fontSize: "clamp(12rem, 20vw, 20rem)", opacity: 0.04, lineHeight: 1 }}>
+        <span
+          className="font-display font-black text-[#EEEEFF]"
+          style={{ fontSize: "clamp(12rem, 20vw, 20rem)", opacity: 0.04, lineHeight: 1, fontFamily: "var(--font-syne), sans-serif" }}>
           01
         </span>
       </div>
@@ -74,9 +75,10 @@ export function HeroSection() {
 
         <motion.p
           variants={fadeUp} initial="hidden" animate="visible" custom={9}
-          className="font-body text-[#9090BB] text-base mb-8 max-w-2xl leading-relaxed"
+          className="font-body text-[#9090BB] text-[1.125rem] mb-8 max-w-xl leading-[1.8]"
         >
-          FastAPI backends · Next.js frontends · Qdrant vector search · SSE streaming · GSAP animations · Framer Motion transitions · WebSocket real-time — five in production. Open to serious remote projects.
+          FastAPI · Next.js · Qdrant · SSE · GSAP · WebSocket — five in production.
+          <br />Open to serious remote projects.
         </motion.p>
 
         <motion.div
