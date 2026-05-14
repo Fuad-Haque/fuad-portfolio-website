@@ -64,7 +64,8 @@ export function HeroSection() {
           variants={fadeUp} initial="hidden" animate="visible" custom={11}
           className="flex flex-wrap items-center gap-4 mb-6"
         >
-          <Button href="/services" variant="ghost" magnetic>View work</Button>
+          <Button href="/services" variant="primary" magnetic>View work</Button>
+          <Button href="https://cal.com/fuad-haque/30min" variant="primary" magnetic>Book a call</Button>
         </motion.div>
 
         <motion.p
