@@ -231,7 +231,7 @@ export default function ServicesPage() {
               </span>
             </div>
           ))}
-          
+          <a
             href="mailto:fuadhaque.dev@gmail.com"
             className="font-mono text-[0.75rem] text-[#0A0A0F] bg-[#6C63FF] hover:bg-[#5B52E8] px-5 py-2.5 transition-colors duration-150 whitespace-nowrap"
           >
