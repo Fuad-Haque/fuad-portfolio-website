@@ -29,7 +29,7 @@ export function FeaturedProjects() {
       </div>
 
       <div className="mt-8">
-        <Link href="/projects" className="font-mono text-sm text-[#6C63FF] hover:underline">
+        <Link href="/projects" className="font-mono text-base text-[#6C63FF] hover:underline">
           All projects →
         </Link>
       </div>
