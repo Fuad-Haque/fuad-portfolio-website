@@ -12,24 +12,20 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   const endpoints = project.endpoints ? JSON.parse(project.endpoints) : []
 
   return (
-    
+    <a
       href={project.live_url || project.docs_url || project.github_url || "#"}
       target="_blank"
       rel="noopener noreferrer"
       data-cursor-card
       className="group relative bg-[#10101A] border border-[#1A1A2E] rounded-sm hover:border-[#2A2A4A] hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_0_30px_#6C63FF15] overflow-hidden block"
     >
-      {/* Left border reveal on hover */}
       <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#6C63FF] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
 
-      {/* Thumbnail area */}
       <div className="relative h-48 bg-[#020208] border-b border-[#1A1A2E] p-4 overflow-hidden">
-        {/* Project number */}
         <span className="font-mono text-[#303055] text-2xl absolute top-3 left-4">
           {String(index + 1).padStart(2, "0")}
         </span>
 
-        {/* Action links */}
         <div className="absolute top-3 right-4 flex items-center gap-2">
           {project.live_url && (
             <a href={project.live_url} target="_blank" rel="noopener noreferrer"
@@ -54,7 +50,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           )}
         </div>
 
-        {/* Endpoint list */}
         <div className="absolute bottom-4 left-4 right-4">
           {endpoints.length > 0 ? (
             endpoints.slice(0, 4).map((ep: string, i: number) => (
@@ -65,13 +60,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           )}
         </div>
 
-        {/* Hover overlay */}
         <div className="absolute inset-0 bg-[#020208]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
           <span className="font-mono text-sm text-[#00D4AA]">→ view project</span>
         </div>
       </div>
 
-      {/* Card body */}
       <div className="p-4">
         <h3 className="font-display font-bold text-[1.25rem] text-[#EEEEFF] mb-1">{project.title}</h3>
         <p className="font-body text-[#9090BB] text-sm mb-3 line-clamp-2">{project.description}</p>
