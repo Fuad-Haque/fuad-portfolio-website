@@ -19,6 +19,7 @@ app.add_middleware(
     allow_origins=[
         "http://localhost:3000",
         "https://fuadhaque.com",
+        "https://www.fuadhaque.com",
         "https://fuad-portfolio-website.vercel.app",
     ],
     allow_credentials=True,
