@@ -9,7 +9,7 @@ export default function AboutPage() {
     "Location:    Sylhet, Bangladesh",
     "Status:      ● available",
     "Stack:       FastAPI · Next.js · Qdrant · SSE · GSAP · WebSocket",
-    "Deployed:    5 projects",
+    "Deployed:    4 projects",
     "Uptime:      actively building",
     "",
     "$ ",
@@ -37,20 +37,32 @@ export default function AboutPage() {
           <TerminalBlock lines={terminalLines} title="fuad@portfolio ~ " />
         </div>
 
-        {/* Right — Text */}
+        {/* Right — Abstract */}
         <div>
+          <p className="font-mono text-[#50507A] text-[0.9rem] mb-6">// abstract</p>
+
           <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-6">
-            Full-stack engineer building production AI-powered systems
+            A polymath, in theoretical terms, is someone who is expert at different skills based on certain levels. But what I think when someone asks me about being a polymath is this — when a person connects distinct fundamentalist critics from various sources and creates new domains.
           </p>
+
           <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-6">
-            FastAPI backends · Next.js frontends · Qdrant vector search · SSE streaming · GSAP animations · Framer Motion transitions · WebSocket real-time
+            For example, if I were to say I&apos;m great at programming — not coding, not computer science fields or mathematics, but at programming — programming for me is about exploring your imaginations. Writing your imaginations. And I also think programming is really hard, isn&apos;t it? I think it first requires your imagination to be at very high dimensions, and not just that, the variables inside your imaginations should be structured, ordered and on point, they can&apos;t be vague or capricious. Then you should apply logic to every variable of your imaginations — PERFECT LOGIC! And that&apos;s not even the hardest part, the hardest part is writing all that imagination, variables, constants, logics; with extremely proper syntax and formulas, man! And there comes the rules of computers and computer science after genuinely writing all that — arrangements, deployments, version control, everything. Cherry on top, you have to also be very good at English, or else you will be devastated. Being good at mathematics, physics, engineering; in an artistic manner, also helps.
           </p>
+
+          <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-6">
+            But back to polymath-ing — I connect all this to one thing: &apos;Love&apos;. Everything we do in life is a way to be loved a little more. All this brainstorming is just a mere way to earn the means that lead to your access of love, from the desired companion. All the knowledge, all the intelligence, but no accessible patterns that break me into your doors.
+          </p>
+
+          <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-6">
+            So the polymath in me will always look for ways to connect my funneling knowledges to develop the imaginations that rewire my brain into winning you.
+          </p>
+
           <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8] mb-8">
-            REST APIs · Webhook integrations · Full-stack MVPs · Semantic search · Real-time dashboards · Task automation
+            I may, be able, to understand the secrets of the universe, but I will never understand the truth about you.
           </p>
 
           <p className="font-mono text-[#50507A] text-[0.75rem]">
-            Reply time: &lt; 4 hours · Timezone: UTC+6 (BDT) · Available for: remote only
+            I therefore dedicate all the operations of this website to the love of my life.
           </p>
         </div>
 
