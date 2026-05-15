@@ -1,16 +1,17 @@
 import asyncio
 from app.database import AsyncSessionLocal
 from app.models import Project
+from sqlalchemy import delete
 
 projects = [
     Project(
-        title="URL Shortener API",
-        description="Production-grade link management service with JWT auth, custom aliases, link expiry, and click tracking. Every redirect is timestamped. Every link belongs to exactly one user.",
-        tech_stack="FastAPI, PostgreSQL, SQLAlchemy, JWT, Pydantic, Railway",
-        live_url="https://web-production-5bd50.up.railway.app",
-        docs_url="https://web-production-5bd50.up.railway.app/docs",
-        github_url="https://github.com/Fuad-Haque/url-shortener-api",
-        endpoints='["POST /shorten", "GET /{short_code}", "GET /stats/{short_code}", "GET /my-links", "DELETE /links/{short_code}"]',
+        title="Semantic Search Platform",
+        description="Production-grade document search engine with hybrid search — dense vector embeddings + BM25 keyword matching + RRF re-ranking. Three result sets rendered side-by-side.",
+        tech_stack="FastAPI, Qdrant, Sentence-Transformers, PostgreSQL, SSE, Next.js, TypeScript, Railway, Vercel",
+        live_url="https://semantic-search-frontend-j6yp.vercel.app/search",
+        docs_url=None,
+        github_url="https://github.com/Fuad-Haque/semantic-search-backend",
+        endpoints='["POST /documents/upload", "GET /documents/", "GET /search/", "DELETE /documents/{id}", "GET /health"]',
         order=1,
         featured=True,
     ),
@@ -37,13 +38,13 @@ projects = [
         featured=True,
     ),
     Project(
-        title="Semantic Search Platform",
-        description="Production-grade document search engine with hybrid search — dense vector embeddings + BM25 keyword matching + RRF re-ranking. Three result sets rendered side-by-side.",
-        tech_stack="FastAPI, Qdrant, Sentence-Transformers, PostgreSQL, SSE, Next.js, TypeScript, Railway, Vercel",
-        live_url="https://semantic-search-frontend-j6yp.vercel.app/search",
-        docs_url=None,
-        github_url="https://github.com/Fuad-Haque/semantic-search-backend",
-        endpoints='["POST /documents/upload", "GET /documents/", "GET /search/", "DELETE /documents/{id}", "GET /health"]',
+        title="URL Shortener API",
+        description="Production-grade link management service with JWT auth, custom aliases, link expiry, and click tracking. Every redirect is timestamped. Every link belongs to exactly one user.",
+        tech_stack="FastAPI, PostgreSQL, SQLAlchemy, JWT, Pydantic, Railway",
+        live_url="https://web-production-5bd50.up.railway.app",
+        docs_url="https://web-production-5bd50.up.railway.app/docs",
+        github_url="https://github.com/Fuad-Haque/url-shortener-api",
+        endpoints='["POST /shorten", "GET /{short_code}", "GET /stats/{short_code}", "GET /my-links", "DELETE /links/{short_code}"]',
         order=4,
         featured=True,
     ),
@@ -51,6 +52,7 @@ projects = [
 
 async def seed():
     async with AsyncSessionLocal() as session:
+        await session.execute(delete(Project))
         for project in projects:
             session.add(project)
         await session.commit()
