@@ -12,9 +12,12 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   const endpoints = project.endpoints ? JSON.parse(project.endpoints) : []
 
   return (
-    <div
+    
+      href={project.live_url || project.docs_url || project.github_url || "#"}
+      target="_blank"
+      rel="noopener noreferrer"
       data-cursor-card
-      className="group relative bg-[#10101A] border border-[#1A1A2E] rounded-sm hover:border-[#2A2A4A] hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_0_30px_#6C63FF15] overflow-hidden"
+      className="group relative bg-[#10101A] border border-[#1A1A2E] rounded-sm hover:border-[#2A2A4A] hover:-translate-y-1 transition-all duration-300 hover:shadow-[0_0_30px_#6C63FF15] overflow-hidden block"
     >
       {/* Left border reveal on hover */}
       <div className="absolute left-0 top-0 bottom-0 w-0.5 bg-[#6C63FF] scale-y-0 group-hover:scale-y-100 transition-transform duration-300 origin-top" />
@@ -30,18 +33,21 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         <div className="absolute top-3 right-4 flex items-center gap-2">
           {project.live_url && (
             <a href={project.live_url} target="_blank" rel="noopener noreferrer"
+              onClick={e => e.stopPropagation()}
               className="font-mono text-[0.65rem] text-[#00D4AA] border border-[#00D4AA30] px-2 py-0.5 hover:bg-[#00D4AA10] transition-colors">
               LIVE
             </a>
           )}
           {project.docs_url && (
             <a href={project.docs_url} target="_blank" rel="noopener noreferrer"
+              onClick={e => e.stopPropagation()}
               className="font-mono text-[0.65rem] text-[#00D4AA] border border-[#00D4AA30] px-2 py-0.5 hover:bg-[#00D4AA10] transition-colors">
               DOCS
             </a>
           )}
           {project.github_url && (
             <a href={project.github_url} target="_blank" rel="noopener noreferrer"
+              onClick={e => e.stopPropagation()}
               className="font-mono text-[0.65rem] text-[#50507A] border border-[#1A1A2E] px-2 py-0.5 hover:bg-[#1A1A2E] transition-colors">
               GH
             </a>
@@ -61,12 +67,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
 
         {/* Hover overlay */}
         <div className="absolute inset-0 bg-[#020208]/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-          {project.docs_url && (
-            <a href={project.docs_url} target="_blank" rel="noopener noreferrer"
-              className="font-mono text-sm text-[#00D4AA]">
-              → /docs
-            </a>
-          )}
+          <span className="font-mono text-sm text-[#00D4AA]">→ view project</span>
         </div>
       </div>
 
@@ -78,6 +79,6 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
           {techs.map((tech, i) => <Badge key={i}>{tech}</Badge>)}
         </div>
       </div>
-    </div>
+    </a>
   )
 }
