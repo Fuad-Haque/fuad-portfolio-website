@@ -18,12 +18,10 @@ const schema = z.object({
 type FormData = z.infer<typeof schema>
 
 const services = [
-  { label: "REST API Build", price: "from $300" },
-  { label: "Webhook Integration", price: "from $400" },
-  { label: "Full-Stack MVP", price: "from $600" },
-  { label: "Semantic Search", price: "from $450" },
-  { label: "Real-Time Dashboard", price: "from $500" },
-  { label: "API Integration", price: "from $300" },
+  { label: "REST API Development", price: "$300 - $800" },
+  { label: "Webhook Integration System", price: "$400 - $600" },
+  { label: "Semantic Search Platform", price: "$450+" },
+  { label: "Full-Stack MVP", price: "$600+" },
 ]
 
 const inputClass = "w-full bg-[#0D0D15] border border-[#1A1A2E] rounded-sm text-[#EEEEFF] font-mono text-sm p-3 placeholder:text-[#303055] focus:outline-none focus:border-[#6C63FF] focus:shadow-[0_0_12px_#6C63FF20] transition-all"
