@@ -44,6 +44,14 @@ export const metadata: Metadata = {
     siteName: "Fuad Haque",
     locale: "en_US",
     type: "website",
+    images: [
+      {
+        url: "https://fuadhaque.com/og/portfolio.png",
+        width: 1200,
+        height: 630,
+        alt: "Fuad Haque — Full-Stack AI Engineer",
+      },
+    ],
   },
   robots: { index: true, follow: true },
 }
