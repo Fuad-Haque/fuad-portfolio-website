@@ -62,7 +62,7 @@ export default function AboutPage() {
           </p>
 
           <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8]">
-            I therefore dedicate all the operations of this website to the love of my life -- Dipu🤍
+            I therefore dedicate all the operations of this website to the love of my life -- D🤍
           </p>
         </div>
 
