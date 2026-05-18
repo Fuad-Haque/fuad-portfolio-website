@@ -2,7 +2,7 @@
 import { useScrollReveal } from "@/hooks/useScrollReveal"
 
 const stats = [
-  { value: "5", label: "projects deployed" },
+  { value: "4", label: "projects deployed" },
   { value: "3", label: "frontends shipped" },
   { value: "<4hr", label: "avg response time" },
 ]
