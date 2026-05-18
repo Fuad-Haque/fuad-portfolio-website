@@ -8,8 +8,8 @@ export default function AboutPage() {
     "Role:        Full-Stack Engineer",
     "Location:    Sylhet, Bangladesh",
     "Status:      ● available",
-    "Stack:       FastAPI · Next.js · Qdrant · SSE · GSAP · WebSocket",
-    "Deployed:    4 projects",
+    "Stack:       FastAPI · Next.js · Qdrant · PostgreSQL · SSE · GSAP · WebSocket",
+    "Deployed:    5 projects",
     "Uptime:      actively building",
     "",
     "$ ",
@@ -61,8 +61,8 @@ export default function AboutPage() {
             I may, be able, to understand the secrets of the universe, but I will never understand the truth about you.
           </p>
 
-          <p className="font-mono text-[#50507A] text-[0.75rem]">
-            I therefore dedicate all the operations of this website to the love of my life.
+          <p className="font-body text-[#9090BB] text-[1.05rem] leading-[1.8]">
+            I therefore dedicate all the operations of this website to the love of my life -- Dipu🤍
           </p>
         </div>
 
