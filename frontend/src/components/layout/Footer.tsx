@@ -13,7 +13,7 @@ export function Footer() {
         <p className="font-mono text-[0.8rem] text-[#9090BB] mb-2">Full-Stack Engineer · Sylhet, Bangladesh</p>
         <div className="flex items-center gap-8 mt-6">
           <a href="https://github.com/Fuad-Haque" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><GithubSVG />GitHub</a>
-          <a href="https://linkedin.com/in/fuadhaque" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><LinkedinSVG />LinkedIn</a>
+          <a href="https://www.linkedin.com/in/fuadhaque-dev" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><LinkedinSVG />LinkedIn</a>
           <a href="mailto:fuadhaque.dev@gmail.com" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><MailSVG />Email</a>
           <a href="https://cal.com/fuad-haque/30min" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><CalSVG />Cal.com</a>
         </div>

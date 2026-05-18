@@ -40,7 +40,7 @@ export function Navbar() {
         </div>
         <div className="ml-auto flex items-center gap-4">
           <a href="https://github.com/Fuad-Haque" target="_blank" rel="noopener noreferrer" className="text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><GithubSVG /></a>
-          <a href="https://linkedin.com/in/fuadhaque" target="_blank" rel="noopener noreferrer" className="text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><LinkedinSVG /></a>
+          <a href="https://www.linkedin.com/in/fuadhaque-dev" target="_blank" rel="noopener noreferrer" className="text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><LinkedinSVG /></a>
         </div>
       </div>
     </nav>
