@@ -61,7 +61,7 @@ export default function AboutPage() {
             I may, be able, to understand the secrets of the universe, but I will never understand the truth about you.
           </p>
 
-          <p className="font-body text-[#9090BB] text-[0.85rem] leading-[1.8]">
+          <p className="font-body text-[#C0C0DD] text-[0.85rem] leading-[1.8]">
             I therefore dedicate all the operations of this website to the love of my life.
           </p>
         </div>
