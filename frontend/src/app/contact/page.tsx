@@ -101,6 +101,17 @@ export default function ContactPage() {
               </a>
             </div>
             <div>
+              <p className="font-mono text-[#50507A] text-[0.75rem] mb-1">// DM</p>
+              <a href="https://www.linkedin.com/in/fuadviews" target="_blank" rel="noopener noreferrer"
+              className="font-mono text-[#9090BB] text-sm hover:text-[#EEEEFF] transition-colors block">
+                LinkedIn
+              </a>
+              <a href="https://x.com/fuadviews" target="_blank" rel="noopener noreferrer"
+              className="font-mono text-[#9090BB] text-sm hover:text-[#EEEEFF] transition-colors block">
+                X
+              </a>
+            </div>
+            <div>
               <p className="font-mono text-[#50507A] text-[0.75rem] mb-1">// Book a call</p>
               <a href="https://cal.com/fuad-haque/30min" target="_blank" rel="noopener noreferrer"
                 className="font-mono text-[#9090BB] text-sm hover:text-[#EEEEFF] transition-colors">
