@@ -186,7 +186,7 @@ export default function ServicesPage() {
           >
             {"Full-stack engineer building"}
             <br />
-            <span className="text-[#6C63FF]">{"production AI-powered"}</span>
+            <span className="text-[#EEEEFF]">{"production AI-powered"}</span>
             {" systems."}
           </h1>
         </div>
