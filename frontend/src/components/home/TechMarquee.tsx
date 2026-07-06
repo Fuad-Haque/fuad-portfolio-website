@@ -1,10 +1,8 @@
 "use client"
 
 const techs = [
-  "FastAPI", "PostgreSQL", "Next.js", "TypeScript", "Docker", "Railway",
-  "Vercel", "Redis", "Qdrant", "Tailwind CSS", "Framer Motion", "JWT",
-  "GitHub Actions", "WebSocket", "SSE", "OpenAI SDK", "Anthropic SDK",
-  "Vercel AI SDK", "Upstash", "Sentry",
+  "FastAPI", "PostgreSQL", "Docker", "Qdrant", "JWT", "WebSocket", "SSE", "OpenAI SDK", "Anthropic SDK",
+  "Vercel AI SDK",
 ]
 
 export function TechMarquee() {
