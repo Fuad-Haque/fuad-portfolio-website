@@ -2,6 +2,7 @@ const GithubSVG = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="cu
 const LinkedinSVG = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
 const MailSVG = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
 const CalSVG = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><rect width="18" height="18" x="3" y="4" rx="2" ry="2"/><line x1="16" x2="16" y1="2" y2="6"/><line x1="8" x2="8" y1="2" y2="6"/><line x1="3" x2="21" y1="10" y2="10"/></svg>
+const XSVG = () => <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M18.36 2H21.5l-7.5 8.57L22.5 22h-6.72l-5.26-6.88L4.5 22H1.36l8.02-9.17L1 2h6.9l4.76 6.29L18.36 2Zm-1.18 18.17h1.85L7.28 3.72H5.3l11.88 16.45Z"/></svg>
 
 export function Footer() {
   return (
@@ -10,11 +11,12 @@ export function Footer() {
         <span className="font-display font-black text-[#EEEEFF]" style={{ fontSize: "clamp(4rem, 10vw, 10rem)", opacity: 0.06, lineHeight: 1, paddingLeft: "1.5rem" }}>FUAD HAQUE</span>
       </div>
       <div className="relative max-w-6xl mx-auto px-6 py-16">
-        <p className="font-mono text-[0.8rem] text-[#9090BB] mb-2">Full-Stack Engineer · Sylhet, Bangladesh</p>
+        <p className="font-mono text-[0.8rem] text-[#9090BB] mb-2">AI Engineer · Sylhet, Bangladesh</p>
         <div className="flex items-center gap-8 mt-6">
-          <a href="https://github.com/Fuad-Haque" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><GithubSVG />GitHub</a>
-          <a href="https://www.linkedin.com/in/fuadhaque-dev" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><LinkedinSVG />LinkedIn</a>
           <a href="mailto:fuadhaque.dev@gmail.com" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><MailSVG />Email</a>
+          <a href="https://www.linkedin.com/in/fuadviews" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><LinkedinSVG />LinkedIn</a>
+          <a href="https://x.com/fuadviews" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><XSVG />X</a>
+          <a href="https://github.com/Fuad-Haque" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><GithubSVG />GitHub</a>
           <a href="https://cal.com/fuad-haque/30min" target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 font-mono text-[0.75rem] text-[#50507A] hover:text-[#EEEEFF] transition-colors duration-150"><CalSVG />Cal.com</a>
         </div>
         <div className="border-t border-[#1A1A2E] mt-10 pt-6 flex items-center justify-between">
