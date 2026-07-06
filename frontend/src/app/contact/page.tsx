@@ -50,7 +50,7 @@ export default function ContactPage() {
     <div className="max-w-6xl mx-auto px-6 md:px-12 pt-32 pb-24">
       <p className="font-mono text-[#50507A] text-[0.9rem] mb-2">// contact</p>
       <p className="font-mono text-[#50507A] text-[0.8rem] mb-12">
-        &gt; serious projects only · reply within 48 hours · no scope = no reply
+        &gt; serious projects only · reply within 48 hours
       </p>
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
