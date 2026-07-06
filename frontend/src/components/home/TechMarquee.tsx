@@ -2,8 +2,9 @@
 
 const techs = [
   "FastAPI", "PostgreSQL", "Next.js", "TypeScript", "Docker", "Railway",
-  "Vercel", "SQLAlchemy", "Pydantic", "Redis", "Qdrant", "Sentence-Transformers",
-  "Tailwind CSS", "Framer Motion", "JWT", "Resend", "GitHub Actions", "WebSocket", "SSE",
+  "Vercel", "Redis", "Qdrant", "Tailwind CSS", "Framer Motion", "JWT",
+  "GitHub Actions", "WebSocket", "SSE", "OpenAI SDK", "Anthropic SDK",
+  "Vercel AI SDK", "Upstash", "Sentry",
 ]
 
 export function TechMarquee() {
