@@ -32,7 +32,7 @@ export function HeroSection() {
           variants={fadeUp} initial="hidden" animate="visible" custom={2}
           className="font-mono text-xs text-[#50507A] mb-6 tracking-widest"
         >
-          &gt; FULL-STACK ENGINEER
+          &gt; AI ENGINEER
         </motion.p>
 
         <div className="mb-6">
@@ -45,7 +45,7 @@ export function HeroSection() {
           </motion.h1>
           <motion.h1
             variants={fadeUp} initial="hidden" animate="visible" custom={7}
-            className="font-display font-black leading-none text-[#6C63FF]"
+            className="font-display font-black leading-none text-[#EEEEFF]"
             style={{ fontSize: "clamp(3.5rem, 8vw, 7rem)" }}
           >
             that ship.
@@ -56,7 +56,7 @@ export function HeroSection() {
           variants={fadeUp} initial="hidden" animate="visible" custom={9}
           className="font-body text-[#9090BB] text-[1.125rem] mb-8 max-w-xl leading-[1.8]"
         >
-          FastAPI · Next.js · Qdrant · SSE · GSAP · WebSocket — five in production.
+          FastAPI · Qdrant · SSE · Anthropic SDK · Vercel AI SDK · JWT Auth — five in production.
           <br />Open to serious remote projects.
         </motion.p>
 
